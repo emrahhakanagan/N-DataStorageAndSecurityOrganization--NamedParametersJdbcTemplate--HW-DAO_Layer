@@ -6,13 +6,14 @@
 
 ## Overview
 
-This project demonstrates the use of Spring Boot with Spring JDBC and NamedParameterJdbcTemplate to interact with a PostgreSQL database. It includes a simple setup with a DAO (Data Access Object) layer for managing `Product` entities, a service layer for business logic, and a controller layer for handling HTTP requests.
+This project demonstrates the use of Spring Boot with Spring JDBC and NamedParameterJdbcTemplate to interact with a PostgreSQL database. It includes a simple setup with a DAO (Data Access Object) layer for managing `Product` entities, a service layer for business logic, and a controller layer for handling HTTP requests. Additionally, Liquibase is used for managing database migrations.
 
 ## Project Structure
 
 - **Controller Layer**: Handles HTTP requests and delegates them to the service layer.
 - **Service Layer**: Contains business logic and interacts with the DAO layer.
 - **DAO Layer**: Manages database operations using NamedParameterJdbcTemplate.
+- **Migrations**: Manages database schema changes using Liquibase.
 
 ## Files
 
@@ -21,19 +22,23 @@ This project demonstrates the use of Spring Boot with Spring JDBC and NamedParam
 - **ProductController.java**: Handles HTTP GET requests for fetching product names by customer first name.
 - **ProductService.java**: Contains the business logic for fetching product names.
 - **ProductRepository.java**: Interacts with the database to fetch product names by customer first name.
-- **JdbcApiJdbcTemplateNamedParametersHwTask1DaoLayerApplication.java**: Main class for running the 
-Spring Boot application.
+- **JdbcApiJdbcTemplateNamedParametersHwTask1DaoLayerApplication.java**: Main class for running the Spring Boot application.
 
-### SQL Files
+### Migration Files
 
-- **schema.sql**: Contains the SQL script for creating the necessary database schema.
-- **find_product_by_name.sql**: Contains the SQL query for fetching product names based 
-on the customer's first name.
-- **data.sql**: Contains sample data for populating the database.
+- **db/changelog/db.changelog-master.xml**: Main Liquibase changelog file.
+- **db/changelog/changeset-001-create-schema.xml**: Creates the `jdbc_hw` schema.
+- **db/changelog/changeset-002-create-customers-table.xml**: Creates the `customers` table.
+- **db/changelog/changeset-003-create-orders-table.xml**: Creates the `orders` table and adds a foreign key constraint.
+
+### SQL Query File
+
+- **find_product_by_name_with_liquibase.sql**: Contains the SQL query for fetching product names based on the customer's first name.
 
 ### Configuration Files
 
-- **application.properties**: Contains the Spring Boot application configuration.
+- **application.properties**: Contains the Spring Boot application configuration including Liquibase settings.
+
 
 ## Getting Started
 
