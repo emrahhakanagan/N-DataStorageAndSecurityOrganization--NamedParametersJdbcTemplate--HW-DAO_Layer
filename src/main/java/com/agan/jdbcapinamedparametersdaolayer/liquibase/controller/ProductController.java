@@ -1,6 +1,6 @@
-package com.agan.jdbcapinamedparametersdaolayer.controller;
+package com.agan.jdbcapinamedparametersdaolayer.liquibase.controller;
 
-import com.agan.jdbcapinamedparametersdaolayer.service.ProductService;
+import com.agan.jdbcapinamedparametersdaolayer.liquibase.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/products/liquibase")
 public class ProductController {
 
     @Autowired

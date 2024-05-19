@@ -1,4 +1,4 @@
-package com.agan.jdbcapinamedparametersdaolayer.repository;
+package com.agan.jdbcapinamedparametersdaolayer.liquibase.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
@@ -21,7 +21,7 @@ public class ProductRepository {
 
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
-    private final String sqlFileNameSearchOrderByName = "find_product_by_name.sql";
+    private final String sqlFileNameSearchOrderByName = "find_product_by_name_with_liquibase.sql";
 
     @Autowired
     public void setDataSource(DataSource dataSource) {

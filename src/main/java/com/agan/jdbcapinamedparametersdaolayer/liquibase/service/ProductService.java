@@ -1,6 +1,6 @@
-package com.agan.jdbcapinamedparametersdaolayer.service;
+package com.agan.jdbcapinamedparametersdaolayer.liquibase.service;
 
-import com.agan.jdbcapinamedparametersdaolayer.repository.ProductRepository;
+import com.agan.jdbcapinamedparametersdaolayer.liquibase.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
