@@ -1,4 +1,4 @@
-package com.agan.jdbcapinamedparametersdaolayer.repository;
+package com.agan.jdbcapinamedparametersdaolayer.sql_basic_without_liquibase.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;

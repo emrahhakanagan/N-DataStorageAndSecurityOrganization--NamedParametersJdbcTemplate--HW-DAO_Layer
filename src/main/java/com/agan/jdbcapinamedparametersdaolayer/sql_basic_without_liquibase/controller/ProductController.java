@@ -1,6 +1,6 @@
-package com.agan.jdbcapinamedparametersdaolayer.controller;
+package com.agan.jdbcapinamedparametersdaolayer.sql_basic_without_liquibase.controller;
 
-import com.agan.jdbcapinamedparametersdaolayer.service.ProductService;
+import com.agan.jdbcapinamedparametersdaolayer.sql_basic_without_liquibase.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
