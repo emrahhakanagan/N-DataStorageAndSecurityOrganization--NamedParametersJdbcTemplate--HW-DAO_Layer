@@ -1,5 +1,6 @@
 package com.agan.jdbcapinamedparametersdaolayer.sql_basic_without_liquibase.repository;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -17,13 +18,15 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Repository
+@AllArgsConstructor
 public class ProductRepository {
 
+    private DataSource dataSource;
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     private final String sqlFileNameSearchOrderByName = "find_product_by_name.sql";
 
-    @Autowired
+//    @Autowired
     public void setDataSource(DataSource dataSource) {
         this.namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
     }
@@ -40,8 +43,6 @@ public class ProductRepository {
     }
 
 
-
-
     private static String read(String scriptFileName) {
         try (InputStream is = new ClassPathResource(scriptFileName).getInputStream();
              BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(is))) {
@@ -51,50 +52,4 @@ public class ProductRepository {
         }
     }
 }
-
-
-/*
-
-import com.agan.jdbcapinamedparametersdaolayer.model.Customer;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.stereotype.Repository;
-
-import javax.sql.DataSource;
-import java.util.List;
-
-@Repository
-@Getter @Setter
-public class ProductRepository {
-    @Autowired
-    private DataSource dataSource;
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
-    @Autowired
-    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-
-//    private final String sql = "select product_name from orders where customer_id = ?";
-private final String sql = "select * from orders";
-
-    public List<Customer> findAll() {
-        RowMapper mapper = (rs, rowNumber) -> {
-            var id = rs.getLong("id");
-            var first_name = rs.getString("first_name");
-            var last_name = rs.getString("last_name");
-            var age = rs.getInt("age");
-            var phone_number = rs.getString("phone_number");
-
-            return new Customer(id, first_name, last_name, age, phone_number);
-        };
-
-        List<Customer> result = jdbcTemplate.query(sql, mapper);
-
-        return result;
-    }
-}
-*/
 
