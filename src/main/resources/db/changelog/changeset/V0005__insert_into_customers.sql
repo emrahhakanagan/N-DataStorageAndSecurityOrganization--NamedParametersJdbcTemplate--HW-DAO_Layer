@@ -1,0 +1,10 @@
+insert into jdbc_hw2_liquibase.customers (id, first_name, last_name, age, phone_number) values (1, 'Alexey', 'Turbern', 29, '+62 345 474 5269');
+insert into jdbc_hw2_liquibase.customers (id, first_name, last_name, age, phone_number) values (2, 'Dehlia', 'Edmundson', 30, '+33 746 284 6867');
+insert into jdbc_hw2_liquibase.customers (id, first_name, last_name, age, phone_number) values (3, 'Natalya', 'Hertwell', 52, '+86 246 532 4423');
+insert into jdbc_hw2_liquibase.customers (id, first_name, last_name, age, phone_number) values (4, 'Hedi', 'Gregol', 41, '+52 745 927 0952');
+insert into jdbc_hw2_liquibase.customers (id, first_name, last_name, age, phone_number) values (5, 'Hugues', 'Macro', 23, '+856 575 530 1029');
+insert into jdbc_hw2_liquibase.customers (id, first_name, last_name, age, phone_number) values (6, 'Zitella', 'Ortzen', 37, '+370 474 833 1911');
+insert into jdbc_hw2_liquibase.customers (id, first_name, last_name, age, phone_number) values (7, 'Dianemarie', 'Ballantine', 31, '+86 274 993 2917');
+insert into jdbc_hw2_liquibase.customers (id, first_name, last_name, age, phone_number) values (8, 'Vidovic', 'Vant', 54, '+33 438 490 6667');
+insert into jdbc_hw2_liquibase.customers (id, first_name, last_name, age, phone_number) values (9, 'Hanni', 'Gwilliams', 18, '+63 779 528 2438');
+insert into jdbc_hw2_liquibase.customers (id, first_name, last_name, age, phone_number) values (10, 'Cordell', 'Woolam', 27, '+86 653 324 4947');
